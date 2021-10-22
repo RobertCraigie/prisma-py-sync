@@ -15,9 +15,9 @@ generator client {
   provider = "prisma-client-py"
 
   // pass options to Prisma Client Python
-  // the `http` option being set to requests means that the generated client
-  // will be synchronous
-  http = "requests"
+  // the `interface` option being set to sync means that the generated client
+  // will be synchronous, e.g. user = client.user.create({'name': 'Robert'})
+  interface = "sync"
 
   // tells Prisma Client Python the depth that pseudo-recursive types should be generated to
   // use -1 for standard recursive types
